@@ -1,0 +1,225 @@
+@import "_var";
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    height: 100vh;
+    background: url(../images/bg-pattern-top-desktop.svg) left top no-repeat,
+                url(../images/bg-pattern-bottom-desktop.svg) 100% -150% no-repeat;
+    @include flexCol($jc:center,$ai:center);
+}
+
+#main-container{
+    width: 950px;
+    height: 500px;
+}
+
+.info-container{
+    width: 100%;
+    height: 50%;
+    @include flexRow("flex-start","center");
+    .text-container{
+        width: 50%;
+        height: 100%;
+        color:$Very-Dark-Magenta;
+
+        h1{
+            font-size: 2.5rem;
+            width: 70%;
+            font-weight:700;
+            letter-spacing: 0px;
+            line-height: 2.6rem;
+        }
+    
+        p{
+            margin-top: 10px;
+            font-size: 0.8rem;
+            line-height: 1.3rem;
+            width: 85%;
+            font-weight:500;
+            color:$Dark-Grayish-Magenta;
+        }
+    }
+
+    .rates-container{
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        .starsCard{
+            width: 370px;
+            height: 47px;
+            border-radius: 0.3rem;
+            margin-top: 15px;
+            background:$Light-Grayish-Magenta;
+            @include flexRow($jc:flex-start,$ai:center);
+            .stars{
+                margin: 0px 25px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 5px;
+                    width: 15px;
+                }
+            }
+            p{
+                font-size: 0.7rem;
+                font-weight: 700;
+                color:$Very-Dark-Magenta;
+            }
+
+            &:nth-child(2){
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &:nth-child(3){
+                float: right;
+            }
+        }
+
+    }
+}
+
+.reviews-container{
+    width: 100%;
+    height: 50%;
+    color:$White;
+    @include flexRow($jc:space-between);
+    .review-card{
+        width: 300px;
+        background:$Very-Dark-Magenta;
+        box-sizing: border-box;
+        padding: 30px 25px;
+        border-radius: 0.4rem;
+        .review-header{
+            @include flexRow($ai:center);
+            img{
+                border-radius: 50%;
+                width: 35px;
+                margin-right: 20px;
+            }
+            p{
+                font-size: 0.7rem;
+                font-weight: 400;
+                color:$Soft-Pink;
+                span{
+                    display: block;
+                    font-weight: 600;
+                    color:$White;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+        .review-text{
+            margin-top: 20px;
+            font-size: 0.7rem;
+            line-height: 1.3rem;
+        }
+        
+        &:nth-child(2){
+            margin-top: 20px;
+        }
+        &:nth-child(3){
+            margin-top: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width:376px){
+    body{
+        @include flexCol($ai:center);
+        height: auto;
+        background: url(../images/bg-pattern-top-mobile.svg) left top no-repeat,
+                url(../images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+    }
+    #main-container{
+        width: 330px;
+        height: auto;
+        margin:80px auto;
+    }
+
+    .info-container{
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        @include flexCol("flex-start","center");
+        .text-container{
+            width: 100%;
+            height: auto;
+            h1{
+                width: 100%;
+                font-size:2.2rem;
+                text-align: center;
+            }
+            p{
+                margin-top: 15px;
+                margin-bottom: 15px;
+                width: 100%;
+                text-align: center;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+        }
+        .rates-container{
+            width: 100%;
+            height: auto;
+            .starsCard{
+                width: 100%;
+                height: 70px;
+                box-sizing: border-box;
+                padding: 5px 0;
+                @include flexCol($jc:space-around,$ai:center);
+                .stars{
+                    height: 20px;
+                    img{
+                        width: 18px;
+                    }
+                }
+                p{
+                    font-size: 0.9rem;
+                }
+                &:nth-child(3){
+                    float:none;
+                }
+            }
+        }
+    }
+
+    .reviews-container{
+        @include flexCol($jc:space-between);
+        .review-card{
+            width: 100%;
+            padding: 40px 30px;
+            margin-bottom: 20px;
+            &:nth-child(2){
+                margin-top: 0;
+            }
+            &:nth-child(3){
+                margin-top: 0;
+            }
+            .review-text{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+
+

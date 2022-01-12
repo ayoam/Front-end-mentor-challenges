@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+
+body{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif; 
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: var(--Bright-orange);
+}
+
+#main-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60%;
+    min-width: 700px;
+    height: 470px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+
+.sub-container:nth-child(1){background-color: var(--Bright-orange);}
+.sub-container:nth-child(2){background-color: var(--Dark-cyan);}
+.sub-container:nth-child(3){background-color: var(--Very-dark-cyan);}
+
+.sub-container{
+    padding: 40px;
+    font-weight: 300;
+    position: relative;
+}
+
+.sub-container>h1{
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color:var(--Very-light-gray);
+    text-transform: uppercase;
+}
+.sub-container>p{
+    font-size: 0.9rem;
+    color:var(--Transparent-white);
+    line-height: 1.5rem;
+}
+
+.learn-more-btn{
+    display: block;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 1.5rem;
+    border: none;
+    outline: none;
+    font-weight: 7;
+    font-family: 'Lexend Deca', sans-serif; 
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sub-container:nth-child(1) .learn-more-btn{color: var(--Bright-orange);}
+.sub-container:nth-child(2) .learn-more-btn{color: var(--Dark-cyan);}
+.sub-container:nth-child(3) .learn-more-btn{color: var(--Very-dark-cyan);}
+
+
+.sub-container .learn-more-btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--Very-light-gray);
+    color:var(--Very-light-gray);
+}
+
+@media only screen and (max-width:700px){
+    body{
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    #main-container{
+        grid-template-columns:none;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 300px;
+        min-width:0;
+        height:auto;
+        margin-top: 10px;
+    }
+
+    .sub-container{
+        height: 350px;
+    }
+
+    .learn-more-btn{
+        bottom: 40px;
+    }
+}
+
+

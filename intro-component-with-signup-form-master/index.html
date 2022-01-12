@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main id="main_container">
+        <section id="heroText_container">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+                but understanding how developers think is invaluable.
+            </p>
+        </section>
+        <section id="form_container">
+            <div class="tryit_card">
+                <p><span>Try it free 7 days </span>&nbsp;then $20/mo. thereafter</p>
+            </div>
+            <form class="register_form">
+                <div class="input_groupe">
+                    <input type="text" id="firstNameInpt"  placeholder="First Name">
+                    <img src="images/icon-error.svg" alt="error icon">
+                    <p class="validation_text"></p>
+                </div>
+                <div class="input_groupe">
+                    <input type="text" id="lastNameInpt" placeholder="Last Name">
+                    <img src="images/icon-error.svg" alt="error icon">
+                    <p class="validation_text"></p>
+                    <p class="validation_text"></p>
+                </div>
+                <div class="input_groupe">
+                    <input type="text" id="emailInpt" placeholder="Email Address">
+                    <img src="images/icon-error.svg" alt="error icon">
+                    <p class="validation_text"></p>
+                    <p class="validation_text"></p>
+                </div>
+                <div class="input_groupe">
+                    <input type="password" id="pwdInpt" placeholder="Password">
+                    <img src="images/icon-error.svg" alt="error icon">
+                    <p class="validation_text">Password cannot be empty</p>
+                    <p class="validation_text"></p>
+                </div>
+                <input type="submit" id="submitBtn" value="CLAIM YOU FREE TRIAL">
+                <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">ayoam</a>.
+        </p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

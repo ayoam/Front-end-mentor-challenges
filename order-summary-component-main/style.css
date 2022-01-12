@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --Pale-blue:hsl(225, 100%, 94%);
+    --Bright-blue:hsl(245, 75%, 52%);
+    --Very-pale-blue:hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Red Hat Display', sans-serif; 
+    padding: 0;
+    margin:0 ;
+    height: 100vh;
+}
+
+#main-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--Pale-blue);
+    background-image: url(/order-summary-component-main/images/pattern-background-desktop.svg);
+    background-position: 0px -50px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-container{
+    margin: 0 auto;
+    width:375px ;
+    background-color: white;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0px 15px 30px -15px var(--Desaturated-blue);
+}
+
+#hero-image{
+    width: 100%;
+}
+
+#hero-image img{
+    width: 100%;
+}
+
+#order-summary{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+
+#order-summary>h2{
+    color: var(--Dark-blue);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+#order-summary>p{
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+    line-height: 150%;
+}
+
+#plan-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    width: 100%;
+    padding:15px ;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+#music-icon-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+
+
+#music-icon-text img{
+    width: 40px;
+    height: 40px;
+}
+
+#plan-text-container{
+    margin-left: 10px;
+}
+
+#plan-text-container h4{
+    margin: 0;
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+#plan-text-container p{
+    margin: 0;
+    margin-top: 3px;
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+
+#plan-container>a{
+    color:var(--Bright-blue);
+    font-weight: 900;
+    font-size: 12px;
+}
+
+#payement-card{
+    margin: 30px 0;
+    font-weight: 700;
+    background-color:var(--Bright-blue);
+    color:white;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 15px 40px -15px var(--Bright-blue);
+    cursor: pointer;
+}
+
+#cancel-btn{
+    text-decoration: none;
+    font-weight: 700;
+    color : var(--Desaturated-blue);
+}

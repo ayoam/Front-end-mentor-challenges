@@ -1,0 +1,212 @@
+@import "_var";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body{
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif; // 500,700
+    background-color: $Light-Grayish-Blue;
+    height: 100vh;
+    @include flexCol($jc:center,$ai:center);
+}
+
+#main-container{
+    background-color: white;
+    width: 730px;
+    height: 280px;
+    @include flexRow;
+    border-radius: 0.5rem;
+    box-shadow: 5px 8px 30px 5px rgba(0, 0, 0, 0.075);
+}
+
+.hero-image-container{
+    width: 39%;
+    height: 100%;
+    background: url(../images/drawers.jpg) left top no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.info-container{
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    padding:  30px 35px;
+    overflow:visible;
+
+    h2{
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+        color:$Very-Dark-Grayish-Blue;
+    }
+    p{
+        margin-bottom: 20px;
+        line-height: 1.3rem;
+        color:$Desaturated-Dark-Blue;
+    }
+
+    .footer-container{
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow:visible;
+        @include flexRow($jc:space-between,$ai:flex-start);
+        .author{
+            @include flexRow;
+            width:50%;
+            img{
+                width: 40px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            p{
+                font-weight: 500;
+                color:$Grayish-Blue;
+                span{
+                    display: block;
+                    margin-bottom: 0;
+                    color:$Very-Dark-Grayish-Blue;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .share-btn{
+            transition: 0.3s background-color;
+            background-color: $Light-Grayish-Blue;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            @include flexCol($jc:center,$ai:center);
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .social-share-preview{
+            visibility: hidden;
+            position: absolute;
+            width: 240px;
+            height: 55px;
+            background-color: $Very-Dark-Grayish-Blue;
+            right: -28%;
+            top: -130%;
+            border-radius: 0.6rem;
+            color:white;
+            box-shadow: 5px 8px 20px 5px rgba(0, 0, 0, 0.151);
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -13px;
+                left: 50%;
+                transform: translate(-50%,0);
+                //convert to rectange
+                width: 0; 
+                height: 0; 
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 13px solid $Very-Dark-Grayish-Blue;
+            }
+
+            @include flexRow($jc:center,$ai:center);
+            span{
+                font-weight: 500;
+                color:$Grayish-Blue;
+                letter-spacing: 4px;
+            }
+            a i{
+                font-size: 1.3rem;
+                margin-left: 15px;
+                color:white;
+            }
+        }
+    }
+}
+
+.active-share-btn{
+    transition: 0.3s;
+    background-color: $Desaturated-Dark-Blue !important;
+    svg path{
+        fill:white !important;
+    }
+}
+
+@media only screen and (max-width:376px){
+    body{
+        height: auto;
+    }
+
+    #main-container{
+        width: 320px;
+        height: auto;
+        @include flexCol;
+        margin: 80px auto;
+        overflow: hidden;
+    }
+
+    .hero-image-container{
+        width: 100%;
+        height: 200px;
+        background: url(../images/drawers.jpg) center no-repeat;
+        background-size: cover;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .info-container{
+        width: 100%;
+        padding:  30px 32px 0px 32px;
+        h2{
+            font-size: 1rem;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+        .footer-container{
+            height: 55px;
+            .author{
+                width: auto;
+            }
+            .share-btn{
+                z-index: 1000;
+            }
+
+            .social-share-preview{
+                top:auto;right: auto;
+                bottom: 0;
+                left: -35px;
+                width: calc(100% + (35px*2));
+                padding: 0 -35px;
+                height: 65px;
+                border-radius: 0;
+                @include flexRow($jc:flex-start,$ai:center);
+                &::after{
+                    visibility: hidden;
+                }
+
+                span{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    .footer-height{
+        height: 65px !important;
+    }
+}
+
+

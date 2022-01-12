@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: #3e3c49;
+  font-weight: 600;
+}
+
+body {
+  background: #ff7a7a url(../images/bg-intro-desktop.png);
+  display: grid;
+  display: -ms-grid;
+  place-items: center;
+}
+
+body, input, ::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+#main_container {
+  max-width: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 180px;
+  height: 540px;
+}
+
+#heroText_container {
+  width: 52%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#heroText_container h1 {
+  font-size: 3rem;
+  line-height: 55px;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+#heroText_container p {
+  padding-right: 20px;
+}
+
+#form_container {
+  width: 48%;
+  height: 100%;
+}
+#form_container .tryit_card {
+  background: #6055a5;
+  padding: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  margin-bottom: 20px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.123);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+#form_container .tryit_card span {
+  font-weight: 600;
+}
+#form_container .register_form {
+  background-color: white;
+  padding: 35px;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.164);
+}
+#form_container .register_form input {
+  width: 100%;
+  height: 55px;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(150, 150, 150, 0.432);
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3e3c49;
+}
+#form_container .register_form input:focus {
+  outline: none;
+  border: 1px solid #3e3c49;
+}
+#form_container .register_form input:not(#submitBtn) {
+  padding-left: 30px;
+}
+#form_container .register_form .input_groupe {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+#form_container .register_form .input_groupe img {
+  visibility: hidden;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+#form_container .register_form .input_groupe .validation_text {
+  display: none;
+  color: #ff7a7a !important;
+  font-style: italic;
+  float: right;
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+#form_container .register_form #submitBtn {
+  color: white;
+  background: #38cc8c;
+  cursor: pointer;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  letter-spacing: 2px;
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.164) inset;
+}
+#form_container .register_form #submitBtn:active {
+  box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.164) inset, 0px 0px 5px 1px #38cc8c;
+}
+#form_container .register_form p {
+  font-size: 0.65rem;
+  margin: 0;
+  color: #b9b6d3;
+}
+#form_container .register_form p a {
+  color: #ff7a7a;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.error {
+  border: 2px solid #ff7a7a !important;
+}
+
+@media only screen and (max-width: 700px) {
+  #main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    width: 330px;
+    margin-bottom: 100px;
+  }
+
+  #heroText_container {
+    width: 100%;
+  }
+  #heroText_container h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  #heroText_container p {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  #form_container {
+    width: 100%;
+  }
+  #form_container .tryit_card {
+    width: 100%;
+    padding: 5px 50px;
+    text-align: center;
+  }
+  #form_container .register_form {
+    padding: 20px;
+  }
+  #form_container .register_form p {
+    text-align: center;
+    max-width: 80%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

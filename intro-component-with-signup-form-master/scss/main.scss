@@ -1,0 +1,182 @@
+@import "_var";
+
+*{
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.attribution a {
+    color: $Dark-Blue;
+    font-weight: 600;
+}
+
+
+body{
+    background: $Red url(../images/bg-intro-desktop.png);
+    display: grid;display: -ms-grid;
+    place-items: center;
+}
+
+body,input,::placeholder{
+    font-family: 'Poppins', sans-serif;//400,500,600,700
+}
+
+
+#main_container{
+    max-width: 1080px;
+    @include flexRow;
+    color:white;
+    margin-top: 40px;
+    margin-bottom: 180px;
+    height: 540px;
+}
+
+#heroText_container{
+    width: 52%;
+    height: 100%;
+    @include flexCol($jc:center,$ai:center);
+    h1{
+        font-size: 3rem;
+        line-height: 55px;
+        margin-bottom: 10px;
+        padding-right: 20px;
+    }
+    p{
+        padding-right: 20px;
+    }
+}
+
+#form_container{
+    width: 48%;
+    height: 100%;
+    .tryit_card{
+        background:$Blue;
+        padding: 18px;
+        width: 100%;
+        @include flexRow($jc:center,$ai:center);
+        border-radius: $border_radius_one;
+        margin-bottom: 20px;
+        box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.123);
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 400;
+        span{
+            font-weight: 600;
+        }
+    }
+    .register_form{
+        background-color: white;
+        padding: 35px;
+        border-radius: $border_radius_one;
+        @include flexCol($ai:center);
+        box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.164);
+        input{
+            width: 100%;
+            height: 55px;
+            border-radius: 0.4rem;
+            border:1px solid rgba(150, 150, 150, 0.432);
+            outline: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color:$Dark-Blue;
+            &:focus{
+                outline: none;
+                border:1px solid $Dark-Blue;
+            }
+            &:not(#submitBtn){
+                padding-left: 30px;
+            }
+        }
+
+        .input_groupe{
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+            img{
+                visibility: hidden;
+                position: absolute;
+                right: 5%;
+                top: 20%;
+            }
+            .validation_text{
+                display: none;
+                color:$Red !important;
+                font-style: italic;
+                float: right;
+                padding-top: 10px;
+                font-weight: 500;
+                font-size: 0.7rem;
+            }
+        }
+        #submitBtn{
+            color:white;
+            background:$Green;
+            cursor: pointer;
+            margin-bottom: 20px;
+            outline: none;
+            border: none;
+            letter-spacing: 2px;
+            box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.164) inset;
+            &:active{
+                box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.164) inset,0px 0px 5px 1px $Green;
+            }
+        }
+        p{
+            font-size: 0.65rem;
+            margin:0;
+            color:$Grayish-Blue;
+            a{
+                color:$Red;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.error{
+    border:2px solid $Red !important;
+}
+
+@media only screen and (max-width:700px){
+    #main_container{
+        @include flexCol;
+        height: auto;
+        width: 330px;
+        margin-bottom: 100px;
+    }
+
+    #heroText_container{
+        width:100%;
+        h1{
+            text-align: center;
+            font-size: 2rem;
+            line-height: 40px;
+        }
+        p{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+
+    #form_container{
+        width: 100%;
+        .tryit_card{
+            width: 100%;
+            padding: 5px 50px;
+            text-align: center;
+        }
+        .register_form{
+            padding: 20px;
+            p{
+                text-align: center;
+                max-width: 80%;
+            }
+        }
+    }
+}

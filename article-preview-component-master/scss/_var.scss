@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+//color variables
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+//flex col mixin
+@mixin flexCol($jc:flex-start,$ai:flex-start) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+//flex row mixin
+@mixin flexRow($jc:flex-start,$ai:flex-start) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $jc;
+    align-items: $ai;
+}
