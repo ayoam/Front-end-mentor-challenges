@@ -61,7 +61,7 @@ body, input, ::placeholder {
 }
 #form_container .tryit_card {
   background: #6055a5;
-  padding: 18px;
+  padding: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
