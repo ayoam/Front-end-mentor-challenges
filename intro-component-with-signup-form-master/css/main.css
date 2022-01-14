@@ -7,6 +7,7 @@
   font-size: 11px;
   text-align: center;
   color: white;
+  margin-top: 50px;
 }
 
 .attribution a {
@@ -16,9 +17,11 @@
 
 body {
   background: #ff7a7a url(../images/bg-intro-desktop.png);
-  display: grid;
-  display: -ms-grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 body, input, ::placeholder {
@@ -32,12 +35,10 @@ body, input, ::placeholder {
   justify-content: flex-start;
   align-items: flex-start;
   color: white;
-  margin-top: 40px;
-  margin-bottom: 180px;
-  height: 540px;
 }
 
 #heroText_container {
+  position: relative;
   width: 52%;
   height: 100%;
   display: flex;
@@ -152,15 +153,22 @@ body, input, ::placeholder {
   border: 2px solid #ff7a7a !important;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+
   #main_container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: auto;
-    width: 330px;
-    margin-bottom: 100px;
+    width: 92%;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
   }
 
   #heroText_container {
